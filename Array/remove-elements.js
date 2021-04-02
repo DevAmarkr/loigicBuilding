@@ -18,3 +18,51 @@ Time complexity O(n)
 Space complexity O(1)
 
 */
+
+/*
+   step1: create a function called removeArray that takes two argument array of integers and value 
+   run a loop on given array
+   check if current array value of matched to given value
+   if matched then splice to an array with that index
+   if not continue 
+   and at end return total length of an array
+
+*/
+
+
+function removeArrayAtPlace(array, target){
+  for(let x = 0; x < array.length; x++){
+      if(array[x] === target){
+          array.splice(x,1)
+          --x
+      }
+      
+  }
+  return array
+}
+
+var result = removeArrayAtPlace([3,3,4,3,4],3)
+console.log(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

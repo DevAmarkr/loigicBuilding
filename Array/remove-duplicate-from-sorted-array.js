@@ -17,3 +17,30 @@ Time complexity O(n)
 Space complexity O(1)
 
 */
+
+/*
+  sorted Array_with dupplicate = [1,2,3,4,4,5,6]
+  remove the duplicates in place 
+  return new length
+
+  create a funnction called remove_duplicatesinSortedArray
+  it takes one argument array with integer
+  create a loop that run though each element 
+  create two pointers index1 will point to curent index and index2 will point next to index1
+  check if both indexes value matching
+  if matching remove the current index and continue the loop
+  return modified array length
+*/
+
+
+function remove_duplicatesinSortedArray(array){
+   for(var x = 0; x < array.length; ++x){
+       let current = array[x], next =array[x+1]
+       if(current === next){
+         array.splice(x,1)
+       }
+   }
+    return array.length
+}
+var result = remove_duplicatesinSortedArray([1,2,3,4,4,5,6])
+console.log(result)
